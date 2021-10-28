@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Thymeleaf Tutorial</title>
+</head>
+<body>
+
+<h2>Manage Locations</h2>
+
+<div align="center"> 
+
+<a th:href="@{posts}">Posts</a> | 
+<a th:href="@{students}">Students</a> | 
+<a th:href="@{users}">Users</a> | 
+<a th:href="@{locations}">Locations</a> 
+
+</div>
+
+<ul>
+    <li th:each="location : ${locations}">
+        <span th:text="${location.name}">Default</span>
+    </li>
+</ul>
+
+</body>
+</html>
